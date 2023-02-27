@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // 컴포넌트 임포트
 import Chart from '../component/core/Chart';
-import List from '../component/core/List';
+import List from '../component/core/list/List';
 import Trade from '../component/core/Trade';
 
 const Dashboard = () => {

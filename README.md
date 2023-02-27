@@ -11,6 +11,7 @@ $ yarn add @tanstack/react-query
 $ yarn add react-icons
 $ yarn add websocket
 $ yarn add @types/websocket --dev
+$ yarn add react-spinners
 $ yarn add redux
 $ yarn add react-redux
 $ yarn add redux-thunk

@@ -68,7 +68,7 @@ const Title = styled.div`
   display: grid;
   height: 45px;
   border-bottom: 1px solid #e1e1e1;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
   div {
     height: 100%;
     display: flex;

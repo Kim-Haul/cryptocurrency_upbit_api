@@ -69,6 +69,7 @@ const Frame = styled.div`
   .header-left {
     font-size: 2.2rem;
     font-weight: 700;
+    padding-left: 20px;
   }
   .header-right {
     position: relative;
