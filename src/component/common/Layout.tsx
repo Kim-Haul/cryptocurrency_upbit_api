@@ -7,18 +7,24 @@ const Layout = () => {
   return (
     <React.Fragment>
       <Header />
-      <Main>
-        <Outlet />
-      </Main>
+      <BgColor>
+        <Main>
+          <Outlet />
+        </Main>
+      </BgColor>
     </React.Fragment>
   );
 };
 
 export default Layout;
+const BgColor = styled.div`
+  background-color: #e9edf3;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 10px;
+`;
 const Main = styled.main`
+  padding-top: 70px;
   width: 1400px;
   margin: 0 auto;
-  background-color: #e9edf3;
-  width: 100%;
-  height: 100vh;
 `;
