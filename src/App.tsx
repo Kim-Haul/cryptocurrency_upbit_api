@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import { GlobalStyles } from './shared/GlobalStyles';
+
+// 페이지 import
+import Layout from './component/common/Layout';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      <GlobalStyles />
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route path="/" element={<Dashboard />} />
+        </Route>
+      </Routes>
+    </React.Fragment>
   );
 }
 
