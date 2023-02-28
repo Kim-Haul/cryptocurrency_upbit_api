@@ -27,7 +27,7 @@ const Wrap = styled.div`
   .main-left {
     width: 990px;
     height: 1920px;
-    border: 1px solid red;
+    border: 1px solid #217af4;
   }
   .main-right {
     width: 400px;

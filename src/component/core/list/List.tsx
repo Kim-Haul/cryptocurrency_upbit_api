@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { AiOutlineSearch } from 'react-icons/ai';
 import ListDetail from './ListDetail';
 
 const List = () => {
+  const [searchInput, setSearchInput] = useState<string>('');
   return (
     <Wrap>
       <Search>
         <div className="input-box">
-          <input type="text" placeholder="코인명/심볼 검색" />
+          <input
+            type="text"
+            placeholder="코인명(영문)/심볼 검색"
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+              setSearchInput(e.target.value);
+            }}
+          />
         </div>
         <div className="search-icon">
           <AiOutlineSearch />
@@ -20,7 +27,7 @@ const List = () => {
         <div>상승률</div>
         <div>거래대금</div>
       </Title>
-      <ListDetail />
+      <ListDetail searchInput={searchInput} />
     </Wrap>
   );
 };
@@ -68,7 +75,9 @@ const Title = styled.div`
   display: grid;
   height: 45px;
   border-bottom: 1px solid #e1e1e1;
-  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+  padding-right: 10px;
+  padding-left: 5px;
   div {
     height: 100%;
     display: flex;
