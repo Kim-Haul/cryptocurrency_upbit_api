@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { AiOutlineSearch } from 'react-icons/ai';
-import ListDetail from './ListDetail';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { AiOutlineSearch } from "react-icons/ai";
+import ListDetail from "./ListDetail";
 
 const List = () => {
-  const [searchInput, setSearchInput] = useState<string>('');
+  // input창 검색어 핸들링
+  const [searchInput, setSearchInput] = useState<string>("");
   return (
     <Wrap>
       <Search>
